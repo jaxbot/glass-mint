@@ -1,0 +1,29 @@
+{
+  "name": "glass-mint",
+  "version": "0.0.0",
+  "description": "Demonstration application that sends Mint.com data to Glass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaxbot/glass-mint"
+  },
+  "keywords": [
+    "glass",
+    "prism",
+    "google",
+    "glass",
+    "mint.com"
+  ],
+  "author": "Jonathan Warner (jaxbot)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaxbot/glass-mint/issues"
+  },
+  "homepage": "https://github.com/jaxbot/glass-mint",
+  "dependencies": {
+    "glass-prism": "0.0.2"
+  }
+}
