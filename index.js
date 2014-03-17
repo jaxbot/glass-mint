@@ -2,8 +2,20 @@ var https = require('https');
 var constants = require('constants');
 
 var config = require('./config.json');
+config.callbacks = {
+	newclient: onNewClient
+};
 
-updateBankInfo();
+var prism = require('glass-prism');
+
+prism.init(config, function() {
+	updateBankInfo();
+	setInterval(updateBankInfo, config.updateFrequency * 60 * 1000);
+});
+
+function onNewClient(tokens) {
+	updateBankInfo();
+}
 
 function updateBankInfo() {
 	pullFromMintApi("/loginUserSubmit.xevent", function(err, data) {
@@ -14,6 +26,10 @@ function updateBankInfo() {
 		var account = data.response["115485"].response[0];
 		console.log(account.currentBalance);
 		console.log(account.accountName);
+		console.log(account.fiName);
+
+		var html = prism.cards.main(account);
+		prism.updateAllCards({ html: html, pinned: true, sourceItemId: "glass_mint" });
 	});
 }
 
