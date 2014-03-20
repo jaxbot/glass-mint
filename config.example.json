@@ -1,0 +1,20 @@
+{
+	/* Rename to config.json */
+
+	/* Obtain from the Google API Console. Instructions:
+	 * http://okaysass.com/posts/14-03-16-tutorial-node-js-mirror-api-google-glass
+	 */
+	"client_id": "",
+	"client_secret": "",
+	"redirect_dir": "",
+
+	/* port for the local server to connect to with a browser to sync with Glass */
+	"port": 8102,
+	"id": "minttest",
+
+	"updateFrequency": 120, /* two hours */
+
+	"mint_username": "",
+	"mint_password": ""
+}
+
