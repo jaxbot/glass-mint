@@ -103,11 +103,17 @@ function pullFromMintApi(path, callback) {
 				}
 			])));
 			query.end();
+			query.on('error', function(err) {
+				console.warn("Error in second call: " + err);
+			});
 		});
 	});
 
 	req.write("username=" + encodeURIComponent(config.mint_username) + "&task=L&password=" + encodeURIComponent(config.mint_password) + "&browser=chrome&browserVersion=33&os=win");
 	req.end();
+	req.on('error', function(err) {
+		console.warn("Error: " + err);
+	});
 
 }
 
