@@ -17,3 +17,9 @@ Open source, MIT licensed, no warranty whatsoever. Feel free to hack it around, 
 
 I develop Glass stuff. Follow me on [Github](https://github.com/jaxbot) for more goodies, or check out my site [OkaySass](http://okaysass.com/).
 
+### Other Glass stuff
+
+[Google Glass development resources](http://jaxbot.me/glassdev)
+
+[My other Glass projects](https://github.com/search?q=%40jaxbot+glass)
+
